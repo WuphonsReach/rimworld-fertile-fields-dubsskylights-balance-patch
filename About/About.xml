@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <packageId>wuphonsreach.FertileFieldsDubsSkylightsBalancePatch</packageId>
+    <modVersion>0.1</modVersion>
+    <name>Fertile Fields + Dubs Skylights Balance Patch</name>
+    <author>wuphonsreach</author>
+    <url>https://github.com/WuphonsReach/rimworld-fertile-fields-balance-patch</url>
+    <supportedVersions>
+        <li>1.6</li>
+    </supportedVersions>
+    <modDependencies>
+        <li>
+            <packageId>Dubwise.DubsSkylights</packageId>
+            <displayName>Dubs Skylights</displayName>
+            <steamWorkshopUrl>steam://url/CommunityFilePage/833899765</steamWorkshopUrl>
+        </li>
+        <li>
+            <packageId>jamaicancastle.RF.fertilefields</packageId>
+            <displayName>Fertile Fields</displayName>
+            <steamWorkshopUrl>steam://url/CommunityFilePage/3225843229</steamWorkshopUrl>
+        </li>
+    </modDependencies>
+    <loadAfter>
+        <li>Dubwise.DubsSkylights</li>
+        <li>jamaicancastle.RF.fertilefields</li>
+        <!-- <li>greysuki.RF.fertilefields</li> -->
+    </loadAfter>
+    <description>
+Balance patch for Rainbeau's Fertile Fields patches to Dubs Skylights.
+    </description>
+</ModMetaData>

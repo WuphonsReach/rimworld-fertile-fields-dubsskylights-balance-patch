@@ -1,0 +1,56 @@
+<!--
+For the base Dubs Skylights, they are made out of pure steel.  
+
+SmeltGlass: One GlassPane is made from four steel with a 1600 work amount.
+SmeltGlass4x: Four GlassPane for 16 steel and 6400 work amount.
+
+- Defs/RecipeDef[defName = "SmeltGlass"]
+- Defs/RecipeDef[defName = "SmeltGlass4x"]
+
+Fertile Fields patches this to:
+
+SmeltGlass: One GlassPane is made from 2 steel plus 1 sand with a 1600 work amount.
+SmeltGlass4x: (missing recipe))
+
+The balance issue is that we've had to do a few steps to get sand from crushed stone.
+And we're missing the SmeltGlass4x recipe.
+
+- Reduce workAmount from (1600 to 500) and (6400 to 1800).
+- Reduce steel amount for bulk recipe to 8 steel plus 4 sand.
+
+-->
+<Patch>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/RecipeDef[defName = "SmeltGlass"]/workAmount</xpath>
+        <value>
+            <workAmount>500</workAmount>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/RecipeDef[defName = "SmeltGlass4x"]/workAmount</xpath>
+        <value>
+            <workAmount>1800</workAmount>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/RecipeDef[defName = "SmeltGlass4x"]/ingredients/li[filter/thingDefs[li="Steel"]]/count</xpath>
+        <value>
+            <count>8</count>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/RecipeDef[defName = "SmeltGlass4x"]/ingredients</xpath>
+        <value>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SandPile</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+        </value>
+    </Operation>
+
+</Patch>

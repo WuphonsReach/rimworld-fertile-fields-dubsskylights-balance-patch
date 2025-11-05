@@ -4,8 +4,8 @@ For the base Dubs Skylights, they are made out of pure steel.
 SmeltGlass: One GlassPane is made from four steel with a 1600 work amount.
 SmeltGlass4x: Four GlassPane for 16 steel and 6400 work amount.
 
-- Defs/RecipeDef[defName = "SmeltGlass"]
-- Defs/RecipeDef[defName = "SmeltGlass4x"]
+- Defs/RecipeDef[defName="SmeltGlass"]
+- Defs/RecipeDef[defName="SmeltGlass4x"]
 
 Fertile Fields patches this to:
 
@@ -21,26 +21,26 @@ And we're missing the SmeltGlass4x recipe.
 -->
 <Patch>
     <Operation Class="PatchOperationReplace">
-        <xpath>Defs/RecipeDef[defName = "SmeltGlass"]/workAmount</xpath>
+        <xpath>Defs/RecipeDef[defName="SmeltGlass"]/workAmount</xpath>
         <value>
             <workAmount>500</workAmount>
         </value>
     </Operation>
 
     <Operation Class="PatchOperationReplace">
-        <xpath>Defs/RecipeDef[defName = "SmeltGlass4x"]/workAmount</xpath>
+        <xpath>Defs/RecipeDef[defName="SmeltGlass4x"]/workAmount</xpath>
         <value>
             <workAmount>1800</workAmount>
         </value>
     </Operation>
     <Operation Class="PatchOperationReplace">
-        <xpath>Defs/RecipeDef[defName = "SmeltGlass4x"]/ingredients/li[filter/thingDefs[li="Steel"]]/count</xpath>
+        <xpath>Defs/RecipeDef[defName="SmeltGlass4x"]/ingredients/li[filter/thingDefs[li="Steel"]]/count</xpath>
         <value>
             <count>8</count>
         </value>
     </Operation>
     <Operation Class="PatchOperationAdd">
-        <xpath>Defs/RecipeDef[defName = "SmeltGlass4x"]/ingredients</xpath>
+        <xpath>Defs/RecipeDef[defName="SmeltGlass4x"]/ingredients</xpath>
         <value>
             <li>
                 <filter>
